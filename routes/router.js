@@ -29,8 +29,8 @@ router.put('/update/item', (req, res, next)=> {
   
     model.set({ title, price, color, size, tags, images, description });
     model.save(function (err, updatedItem) {
-      if (err) return console.log(err);
-      next();
+      if (err) return console.log(err); 
+      next(); 
     });
   }).then(()=>{
     const logUpdate = new ModelLog({ 
